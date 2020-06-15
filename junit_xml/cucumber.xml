@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="306.258088">
+<testcase classname="MRA form" name="User validate the Eligibility section" time="60.51784">
+<failure message="java.lang.AssertionError: [ The expected question-Is the applicant registered in Singapore?-does not matched with-  Is the applicant registered in Singapore?&#10; *&#10;,  The expected question- Is the applicant's group sales turnover less than or equal to S$100m or is the applicant's group employment size less than or equal to 200? -does not not matched with actual question-  Is the applicant's group sales turnover less than or equal to S$100m or is the applicant's group employment size less than or equal to 200?&#10; *&#10;,  The expected question-Does the applicant have at least 30% local equity?-does not matched with actual question-  Does the applicant have at least 30% local equity?&#10; *&#10;,  The expected question-Are all the following statements true for this project? * -does not matched with actual question-  Is the target market that you are applying for a new market? A market is new if your company's revenue from there has not exceeded $100,000 for any of the last 3 years.&#10; *&#10;]&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at stepDefinitions.StepDef_Form.user_validates_the_text_of_question_which_should_be_as_expected(StepDef_Form.java:175)&#13;&#10;&#9;at ✽.And user validates the text of question which should be as expected(MRAForm.feature:15)&#13;&#10;"><![CDATA[Given user navigates to MRA form page after login...........................passed
+When user validates questions in the form...................................passed
+And user answers no to any question.........................................passed
+And user should get a warning message as expected...........................passed
+And user click on link in Warning message a new tab opens...................passed
+And user switch new tab and validates the URL...............................passed
+When user select the answer to each mandatory question......................passed
+And user save the form after click on the button............................passed
+And user refresh the page...................................................passed
+And user validates the text of question which should be as expected.........failed
+And user close the browser..................................................skipped
+
+StackTrace:
+java.lang.AssertionError: [ The expected question-Is the applicant registered in Singapore?-does not matched with-  Is the applicant registered in Singapore?
+ *
+,  The expected question- Is the applicant's group sales turnover less than or equal to S$100m or is the applicant's group employment size less than or equal to 200? -does not not matched with actual question-  Is the applicant's group sales turnover less than or equal to S$100m or is the applicant's group employment size less than or equal to 200?
+ *
+,  The expected question-Does the applicant have at least 30% local equity?-does not matched with actual question-  Does the applicant have at least 30% local equity?
+ *
+,  The expected question-Are all the following statements true for this project? * -does not matched with actual question-  Is the target market that you are applying for a new market? A market is new if your company's revenue from there has not exceeded $100,000 for any of the last 3 years.
+ *
+]
+	at org.junit.Assert.fail(Assert.java:88)
+	at stepDefinitions.StepDef_Form.user_validates_the_text_of_question_which_should_be_as_expected(StepDef_Form.java:175)
+	at ✽.And user validates the text of question which should be as expected(MRAForm.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="MRA form" name="Do basic validation for contact details page" time="67.467465">
+<system-out><![CDATA[Given user navigates to MRA form page after login...........................passed
+When user navigates to contact details sections.............................passed
+When user validates Main contact person subsection with inputs..............passed
+And user checks that Block House No and Street details auto populates with Valid postal code.passed
+And on clicking checkbox Same as registered address in Company Profile user validates auto population of Mailing address.passed
+And user validates Letter of Offer Addressee subsection with input..........passed
+And user validates option for same as main contact person with auto populate.passed
+And user save the form after click on the button............................passed
+And user refresh the page...................................................passed
+And user validate the reloaded values.......................................passed
+And user close the browser..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="MRA form" name="To do form submission after giving mandatory details and review" time="178.272783">
+<system-out><![CDATA[Given user navigates to MRA form page after login...........................passed
+When user select the answer to each mandatory question......................passed
+And user save the form after click on the button............................passed
+When user navigates to contact details sections.............................passed
+When user validates Main contact person subsection with inputs..............passed
+And user checks that Block House No and Street details auto populates with Valid postal code.passed
+And on clicking checkbox Same as registered address in Company Profile user validates auto population of Mailing address.passed
+And user validates Letter of Offer Addressee subsection with input..........passed
+And user validates option for same as main contact person with auto populate.passed
+And user save the form after click on the button............................passed
+And user fills information in all section but leaves one mandatory information unfilled.passed
+And user saves and click on Review after which user validates the error and validates the page redirected to.passed
+And user fills all mandatory details and click on Review button in Declare and Review section.passed
+And user is navigated to read only summary page and he validates the page values.passed
+And user clicks on Consent and Acknowledgement checkbox and he gets a message of submission.passed
+And user checks if his application is under Processing tab in Grants dashboard.passed
+And user close the browser..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
